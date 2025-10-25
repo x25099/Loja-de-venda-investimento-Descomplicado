@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Conquista Financeira - Aprenda a Investir com Segurança</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: #ffffff;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            color: #0A2647;
+            margin: 0 0 20px 0;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            line-height: 1.4;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            font-size: 1.1em;
+        }
+
+        /* Container */
+        .container {
+            max-width: 100%;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+            width: 100%;
+        }
+
+        .section-dark {
+            background: #0A2647;
+            color: white;
+        }
+
+        .section-light {
+            background: #ffffff;
+            color: #333333;
+        }
+
+        .section-gray {
+            background: #F3F4F6;
+            color: #333333;
+        }
+
+        .section-gold {
+            background: #FFD700;
+            color: #0A2647;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0A2647 0%, #144272 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,215,0,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .highlight-gold {
+            color: #FFD700;
+            font-weight: 700;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #FFD700;
+            color: #0A2647;
+            padding: 18px 35px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+            background: #FFED4A;
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Problem Section */
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .problem-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #FFD700;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .problem-icon {
+            font-size: 2.5em;
+            flex-shrink: 0;
+        }
+
+        .problem-text {
+            flex: 1;
+        }
+
+        .problem-text h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .problem-text p {
+            margin: 0;
+            color: #666;
+        }
+
+        /* Solution Section */
+        .solution-highlight {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .solution-highlight h3 {
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            color: #0A2647;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #666;
+            margin: 0;
+        }
+
+        /* Authority Section */
+        .authority-card {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .authority-avatar {
+            width: 100px;
+            height: 100px;
+            background: #0A2647;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: #FFD700;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4em;
+            color: #FFD700;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            color: #666;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #0A2647;
+        }
+
+        .testimonial-role {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .final-cta h2 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+        }
+
+        .final-cta p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .urgency-text {
+            margin-top: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Trust Indicators */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .trust-icon {
+            font-size: 2em;
+            color: #FFD700;
+        }
+
+        .trust-text {
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 800px;
+                padding: 0 40px;
+            }
+
+            h1 {
+                font-size: 2.8em;
+            }
+
+            h2 {
+                font-size: 2.2em;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-badges {
+                gap: 50px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 38, 71, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .loading-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 215, 0, 0.3);
+            border-top: 4px solid #FFD700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Redirecionando para o checkout seguro...</p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Descubra o <span class="highlight-gold">Método Que Transforma</span> Qualquer Pessoa em um Investidor Seguro e Inteligente</h1>
+                    <p class="subtitle">Um passo a passo prático para você investir em ações, fundos, ETFs e renda fixa — mesmo começando do zero.</p>
+                    
+                    <a href="https://pay.kiwify.com.br/Rdyzc0G" class="cta-button">👉 Quero Aprender a Investir Agora!</a>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <span class="trust-icon">🛡️</span>
+                            <span class="trust-text">100% Seguro</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="trust-icon">📱</span>
+                            <span class="trust-text">Acesso Imediato</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="trust-icon">⚡</span>
+                            <span class="trust-text">Método Prático</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="section section-light">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px;">Você se identifica com alguma dessas situações?</h2>
+                
+                <ul class="problem-list">
+                    <li class="problem-item fade-in">
+                        <span class="problem-icon">😰</span>
+                        <div class="problem-text">
+                            <h3>Sente que investir é complicado demais?</h3>
+                            <p>Você fica perdido com tantos termos técnicos e não sabe nem por onde começar.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="problem-item fade-in">
+                        <span class="problem-icon">🤯</span>
+                        <div class="problem-text">
+                            <h3>Já tentou entender sobre ações, mas se perdeu?</h3>
+                            <p>Gráficos confusos, análises complicadas... Parece que é só para especialistas.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="problem-item fade-in">
+                        <span class="problem-icon">💸</span>
+                        <div class="problem-text">
+                            <h3>Tem medo de perder dinheiro?</h3>
+                            <p>Você quer investir, mas fica paralisado pensando "E se eu perder tudo?"</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 style="color: white; text-align: center;">A Solução Que Você Estava Procurando</h2>
+                
+                <div class="solution-highlight">
+                    <h3>Método Conquista Financeira</h3>
+                    <p style="color: white; font-size: 1.2em; margin: 0;">Foi por isso que criei o <strong>Método Conquista Financeira</strong> — um guia prático e direto ao ponto que ensina como investir com segurança, clareza e resultados reais.</p>
+                </div>
+                
+                <p style="color: white; font-size: 1.1em; text-align: center; margin-bottom: 30px;">
+                    <strong>Não é um livro teórico.</strong> É um método passo a passo que funciona na prática, criado especialmente para quem quer começar a investir sem complicação e sem medo.
+                </p>
+                
+                <div style="text-align: center;">
+                    <a href="https://pay.kiwify.com.br/Rdyzc0G" class="cta-button">👉 Quero Começar Agora!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section section-gray">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px;">O que você vai aprender:</h2>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in">
+                        <span class="benefit-icon">🎯</span>
+                        <h3>Aprenda no seu ritmo e do zero</h3>
+                        <p>Linguagem simples, sem jargões técnicos. Perfeito para iniciantes.</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <span class="benefit-icon">🛡️</span>
+                        <h3>Descubra onde investir sem medo</h3>
+                        <p>Estratégias seguras e testadas para você dormir tranquilo.</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <span class="benefit-icon">📊</span>
+                        <h3>Monte sua carteira com segurança</h3>
+                        <p>Aprenda a diversificar seus investimentos de forma inteligente.</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <span class="benefit-icon">💰</span>
+                        <h3>Veja resultados reais</h3>
+                        <p>Estratégias práticas e aplicáveis que realmente funcionam.</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <span class="benefit-icon">⚡</span>
+                        <h3>Método direto, sem enrolação</h3>
+                        <p>Vai direto ao ponto, sem teoria desnecessária.</p>
+                    </div>
+                    
+                    <div class="benefit-card fade-in">
+                        <span class="benefit-icon">📱</span>
+                        <h3>Acesso imediato</h3>
+                        <p>Comece a aprender hoje mesmo, de qualquer lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authority Section -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="authority-card">
+                    <div class="authority-avatar">👨‍💼</div>
+                    <h3>Desenvolvido por Matheus Ribeiro</h3>
+                    <p><strong>Investidor e apaixonado por finanças</strong>, com experiência prática no mercado financeiro. Criou este método após perceber que a maioria das pessoas desiste de investir por falta de orientação clara e simples.</p>
+                    <p style="margin: 0;"><em>"Minha missão é democratizar os investimentos e mostrar que qualquer pessoa pode conquistar sua liberdade financeira."</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section section-gray">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px;">Veja o que nossos alunos estão dizendo:</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <p class="testimonial-text">Depois de aplicar o método, comecei a investir com confiança. Em 3 meses já vi meu dinheiro render mais que anos na poupança!</p>
+                        <div class="testimonial-author">João M.</div>
+                        <div class="testimonial-role">Contador, 32 anos</div>
+                    </div>
+                    
+                    <div class="testimonial-card fade-in">
+                        <p class="testimonial-text">Simples, prático e direto. Finalmente entendi como o dinheiro pode trabalhar pra mim. Recomendo para todos!</p>
+                        <div class="testimonial-author">Carla R.</div>
+                        <div class="testimonial-role">Professora, 28 anos</div>
+                    </div>
+                    
+                    <div class="testimonial-card fade-in">
+                        <p class="testimonial-text">Eu tinha muito medo de investir. O método me deu a segurança que eu precisava. Hoje tenho uma carteira diversificada!</p>
+                        <div class="testimonial-author">Pedro S.</div>
+                        <div class="testimonial-role">Engenheiro, 35 anos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="section section-gold final-cta">
+            <div class="container">
+                <h2>A diferença entre quem sonha com liberdade financeira e quem a conquista está em agir.</h2>
+                <p>Comece hoje sua jornada rumo à independência financeira!</p>
+                
+                <a href="https://pay.kiwify.com.br/Rdyzc0G" class="cta-button" style="background: #0A2647; color: #FFD700;">👉 Quero Aprender a Investir Agora!</a>
+                
+                <p class="urgency-text">⚠️ Oferta especial por tempo limitado - Garante já o seu acesso!</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Show loading overlay
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                loadingOverlay.classList.add('active');
+                
+                // Simulate redirect after 2 seconds
+                setTimeout(() => {
+                    loadingOverlay.classList.remove('active');
+                    
+                    // Create purchase simulation modal
+                    const modal = document.createElement('div');
+                    modal.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(10, 38, 71, 0.95);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 10000;
+                        padding: 20px;
+                    `;
+                    
+                    modal.innerHTML = `
+                        <div style="background: white; padding: 40px; border-radius: 20px; text-align: center; max-width: 500px; width: 100%;">
+                            <h3 style="color: #0A2647; margin-bottom: 20px; font-family: 'Poppins', sans-serif;">🎉 Parabéns pela decisão!</h3>
+                            <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">Esta é uma demonstração da página de vendas. Em uma implementação real, você seria redirecionado para o checkout seguro do método.</p>
+                            <button onclick="this.parentElement.parentElement.remove()" style="background: #FFD700; color: #0A2647; border: none; padding: 15px 30px; border-radius: 25px; cursor: pointer; font-size: 16px; font-weight: 600; font-family: 'Poppins', sans-serif;">Fechar</button>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(modal);
+                }, 2000);
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.benefit-card, .testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0px)';
+            });
+        });
+
+        // Add touch feedback for mobile
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            button.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Parallax effect for hero section (subtle)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < hero.offsetHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99454ab5d41f9096',t:'MTc2MTQzMjgyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
